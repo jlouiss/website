@@ -2,6 +2,7 @@ body,
 html {
     background-color: #FF964D;
     height: 100%;
+    width: 100%;
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 200;
@@ -76,12 +77,25 @@ a:focus {
     background-color: #ee853c;
 }
 
+.footer {
+    margin-top: 40px;
+    height: 25px;
+    color: #333;
+}
+
+.footer a {
+    color: #333;
+}
+.footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
 * {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
-    /* ?? */
+    user-select: none; /* ?? */
 }
 
 @media screen and (max-width: 767px) {

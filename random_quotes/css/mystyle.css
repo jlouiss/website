@@ -45,6 +45,21 @@ h1 {
     height: 25px;
 }
 
+a {
+    color: #ccc;
+}
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; /* ?? */
+}
+
 @media screen and (max-width: 767px) {
     h1 {
         font-size: 50px;
