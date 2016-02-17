@@ -22,7 +22,7 @@ body {
 }
 
 #screen {
-    background-color: #6F7B5F;
+    background-color: #808c70;
     font-family: 'LCDBOLD', 'Courier', monospace;
     font-weight: bold;
     font-size: 20px;
@@ -39,4 +39,21 @@ body {
     margin-top: 67px;
     border-radius: 15px;
     background-color: #333;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* ?? */
 }

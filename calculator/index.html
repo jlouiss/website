@@ -13,37 +13,43 @@
 </head>
 
 <body>
-    <div class="well col-xs-4 col-xs-offset-4 col-sm-3 col-lg-2 col-lg-offset-5">
-        <div class="row">
-            <input type="text" id="screen" value="0" maxlength="13" class="col-xs-10 col-xs-offset-1" disabled style="text-align:right;">
+    <div class="container">
+        <div class="well col-xs-4 col-xs-offset-4 col-sm-3 col-lg-2 col-lg-offset-5">
+            <div class="row">
+                <input type="text" id="screen" value="0" maxlength="13" class="col-xs-10 col-xs-offset-1" disabled style="text-align:right;">
+            </div>
+            <div class="row">
+                <div class="btn btn-default col-xs-3 fn" id="C">C</div>
+                <div class="btn btn-default col-xs-3 fn" id="M">M</div>
+                <div class="btn btn-default col-xs-3 fn" id="MR">MR</div>
+                <div class="btn btn-default col-xs-3 op mult" id="divided">&divide;</div>
+            </div>
+            <div class="row">
+                <div class="btn btn-default col-xs-3 num" value="7">7</div>
+                <div class="btn btn-default col-xs-3 num" value="8">8</div>
+                <div class="btn btn-default col-xs-3 num" value="9">9</div>
+                <div class="btn btn-default col-xs-3 op mult" id="times">&times;</div>
+            </div>
+            <div class="row">
+                <div class="btn btn-default col-xs-3 num" value="4">4</div>
+                <div class="btn btn-default col-xs-3 num" value="5">5</div>
+                <div class="btn btn-default col-xs-3 num" value="6">6</div>
+                <div class="btn btn-default col-xs-3 op sum" id="minus">&minus;</div>
+            </div>
+            <div class="row">
+                <div class="btn btn-default col-xs-3 col-xs-push-9 op sum" id="plus">+</div>
+                <div class="btn btn-default col-xs-3 col-xs-pull-3 num" value="1">1</div>
+                <div class="btn btn-default col-xs-3 col-xs-pull-3 num" value="2">2</div>
+                <div class="btn btn-default col-xs-3 col-xs-pull-3 num" value="3">3</div>
+                <div class="btn btn-default col-xs-3 col-xs-pull-3 num" value="0">0</div>
+                <div class="btn btn-default col-xs-3 col-xs-pull-3 num" value=".">.</div>
+                <div class="btn btn-default col-xs-3 col-xs-pull-3 fn" id="equals">=</div>
+            </div>
         </div>
-        <div class="row">
-            <div class="btn btn-default col-xs-3 fn" id="C">C</div>
-            <div class="btn btn-default col-xs-3 fn" id="M">M</div>
-            <div class="btn btn-default col-xs-3 fn" id="MR">MR</div>
-            <div class="btn btn-default col-xs-3 op mult" id="divided">&divide;</div>
-        </div>
-        <div class="row">
-            <div class="btn btn-default col-xs-3 num" value="7">7</div>
-            <div class="btn btn-default col-xs-3 num" value="8">8</div>
-            <div class="btn btn-default col-xs-3 num" value="9">9</div>
-            <div class="btn btn-default col-xs-3 op mult" id="times">&times;</div>
-        </div>
-        <div class="row">
-            <div class="btn btn-default col-xs-3 num" value="4">4</div>
-            <div class="btn btn-default col-xs-3 num" value="5">5</div>
-            <div class="btn btn-default col-xs-3 num" value="6">6</div>
-            <div class="btn btn-default col-xs-3 op sum" id="minus">&minus;</div>
-        </div>
-        <div class="row">
-            <div class="btn btn-default col-xs-3 col-xs-push-9 op sum" id="plus">+</div>
-            <div class="btn btn-default col-xs-3 col-xs-pull-3 num" value="1">1</div>
-            <div class="btn btn-default col-xs-3 col-xs-pull-3 num" value="2">2</div>
-            <div class="btn btn-default col-xs-3 col-xs-pull-3 num" value="3">3</div>
-            <div class="btn btn-default col-xs-3 col-xs-pull-3 num" value="0">0</div>
-            <div class="btn btn-default col-xs-3 col-xs-pull-3 num" value=".">.</div>
-            <div class="btn btn-default col-xs-3 col-xs-pull-3 fn" id="equals">=</div>
-        </div>
+    </div>
+    <div class="footer text-center">
+        <small>Copyright ©
+            <a href="http://jlouiss.github.io/">Jean Louis Salbego</a> 2016</small>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
