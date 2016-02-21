@@ -30,6 +30,8 @@
         }
         #days {
             font-size: 51px;
+            text-align: center;
+            display: inline-block;
         }
         main {
             margin-top: 200px;
@@ -63,7 +65,8 @@
                 msPerDay = 60 * 60 * 24 * 1000;
                 centsPerDay = 60 * 60 * 24 * 100,
                 centsToday = Math.floor((dayX.getTime() - now.getTime() - timeDifference) / 1000),
-                days = Math.floor(centsToday / centsPerDay * 100000) / 1000;
+                days = Math.floor(((dayX.getTime() - now.getTime() - timeDifference) /
+                    (centsPerDay * 10)) * 100000) / 100000;
             document.getElementById('seconds').innerHTML = centsToday;
             document.getElementById('cents').innerHTML = Math.floor(now.getMilliseconds() / 10);
             document.getElementById('days').innerHTML = days;
