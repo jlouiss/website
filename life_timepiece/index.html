@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="Jean Louis Salbego">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jean Louis Salbego">
 
-	<title>Life Timepiece</title>
+    <title>Life Timepiece</title>
 
-	<link href="./bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,800' rel='stylesheet' type='text/css'>
+    <style>
+        * {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        .description {
+            font-size: 28px;
+            font-weight: 200;
+        }
+        .number {
+            font-size: 50px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        #cents {
+            font-size: 21px;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
-	<div class="container text-center">
+    <div class="jumbotron text-center">
+        <h1 class="text-primary">Life Timepiece</h1>
+    </div>
 
-		<div class="row row-content">
-			<h1 class="text-primary">Life Timepiece</h1>
-		</div>
+    <div class="container text-center">
+        <div class="row row-content">
+            <span class="number" id="secondsLeft"></span>
+            <span class="text-muted number" id="cents"></span>
 
-		<div class="row row-content">
-			<p class="text-muted">Seconds Left Today</p>
-			<span id="secondsLeft"></span>
-			<span class="text-muted" id="cents"></span>
+            <p class="text-muted description">Seconds Left Today</p>
+        </div>
 
-			<span id="test"></span>
-		</div>
+        <div class="row row-content">
+            <span class="number" id="ageInDays"></span>
 
-		<div class="row row-content">
-			<p class="text-muted">Your age in days</p>
-			<span id="ageInDays"></span>
-		</div>
+            <p class="text-muted description">Your age in days</p>
+        </div>
 
-		<div>
-			<p class="text-muted">Days Left This Year</p>
-			<span id="daysLeft"></span>
-		</div>
+        <div class="row row-content">
+            <span class="number" id="daysLeft"></span>
 
-	</div>
+            <p class="text-muted description">Days Left This Year</p>
+        </div>
+    </div>
 
-	<script src="./jquery.min.js"></script>
-	<script src="./bootstrap.min.js"></script>
-	<script src="./time.js"></script>
+    <script src="./jquery.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+    <script src="./time.js"></script>
 </body>
+
 </html>
