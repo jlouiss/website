@@ -2,52 +2,90 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Jean Louis Salbego Web Developer - under construction</title>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,800' rel='stylesheet' type='text/css'>
-	<style>
-		* {
-			font-family: 'Source Sans Pro', sans-serif;
-		}
-		.jumbotron {
-			font-weight: 800;
-			color: #fff;
-			text-shadow: 2px 3px 6px rgba(153, 126, 82, 1.0);
-			background-color: #ADFFAD;
-		}
-	</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jean Louis Salbego Web Developer - under construction</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,800' rel='stylesheet' type='text/css'>
+    <style>
+        html {
+            position: relative;
+            height: 100%;
+        }
+        
+        body {
+            /* Margin bottom by footer height */
+            margin-bottom: 60px;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        
+        .jumbotron {
+            font-weight: 800;
+            color: #fff;
+            text-shadow: 2px 3px 6px rgba(153, 126, 82, 1.0);
+            background-color: #ADFFAD;
+        }
+        
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            height: 60px;
+            background-color: #f5f5f5;
+        }
+        
+        footer div {
+            /* ehhh... */
+            background-color: #f5f5f5;
+        }
+        
+        footer div div {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
-	<div class="jumbotron text-center">
-		<h1>Jean Louis Salbego</h1>
-	</div>
+    <div class="jumbotron text-center">
+        <h1>Jean Louis Salbego</h1>
+    </div>
 
-	<div class="container">
-		<div class="col-xs-12 text-center">
-			<h2 class="text-info">My works so far</h2>
-			<ul class="list-inline">
-				<li><a href="calculator/index.html">Calculator</a></li>
-				<li><a href="pomodoro_timer/index.html">Pomodoro Timer</a></li>
-				<li><a href="random_quotes/index.html">Random Quotes Machine</a></li>
-				<li><a href="tribute_page/index.html">Tribute to Nikola Tesla</a></li>
-				<li><a href="life_timepiece/index.html">Life Timepiece</a></li>
-			</ul>
-			<p>Projects made with <span class="text-info">Bootstrap</span>,
-				<span class="text-info">JavaScript (jQuery)</span> and
-				<em><a href="countdown.html"><span class="text-danger">love</span></em></a>.</p>
-		</div>
-	</div>
+    <div class="container">
+        <div class="col-xs-12 text-center">
+            <h2 class="text-info">My works so far</h2>
+            <ul class="list-inline">
+                <li><a href="calculator/index.html">Calculator</a></li>
+                <li><a href="pomodoro_timer/index.html">Pomodoro Timer</a></li>
+                <li><a href="random_quotes/index.html">Random Quotes Machine</a></li>
+                <li><a href="tribute_page/index.html">Tribute to Nikola Tesla</a></li>
+                <li><a href="life_timepiece/index.html">Life Timepiece</a></li>
+            </ul>
+            <p>Projects made with <span class="text-info">Bootstrap</span>,
+                <span class="text-info">JavaScript (jQuery)</span> and
+                <em><a href="countdown.html"><span class="text-danger">love</span></em></a>.</p>
+        </div>
+    </div>
 
-	<footer class="container text-muted text-center">
-		<p>Copyright Jean Louis Salbego 2016 - Under construction.</p>
-	</footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="col-xs-12 col-sm-8">
+                <ul class="list-inline text-left">
+                    <li><a href="https://twitter.com/jlslbg">Twitter</a></li>
+                    <li><a href="https://github.com/jlouiss">GitHub</a></li>
+                    <li><a href="http://www.freecodecamp.com/jlouiss">freeCodeCamp</a></li>
+                    <li><a href="http://codepen.io/JLouisS/">Codepen</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <p class="text-muted text-right">Jean Louis Salbego - 2016</p>
+            </div>
+        </div>
+    </footer>
 
-	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 
 </html>
