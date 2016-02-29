@@ -1,0 +1,21 @@
+{
+  "name": "Local weather",
+  "homepage": "http://jlouiss.github.io",
+  "authors": [
+    "jlouiss <jlsalbego@gmail.com>"
+  ],
+  "description": "shows you your local weather",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "weather"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
