@@ -39,6 +39,7 @@ body {
     margin-top: 67px;
     border-radius: 15px;
     background-color: #333;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 a {
