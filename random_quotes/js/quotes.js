@@ -36,7 +36,6 @@ function generate() {
             author = '- ' + quotes[rand][1] + ' -';
         $('#quote').html(quote);
         $('#author').html(author);
-        $('.twitter-share-button').attr('data-text', (quote + '\n' + author + '\n'));
         dist.unshift(rand);
         dist.pop();
         console.log(dist);
