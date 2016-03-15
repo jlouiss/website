@@ -58,19 +58,25 @@
         </div>
     </main>
     <script>
-        setInterval(function () {
-            var now = new Date(),
-                dayX = new Date('April 13, 2016');
-                timeDifference = now.getTimezoneOffset() * 60 * 1000;
-                msPerDay = 60 * 60 * 24 * 1000;
-                centsPerDay = 60 * 60 * 24 * 100,
-                centsToday = Math.floor((dayX.getTime() - now.getTime() - timeDifference) / 1000),
-                days = Math.floor(((dayX.getTime() - now.getTime() - timeDifference) /
-                    (centsPerDay * 10)) * 100000) / 100000;
-            document.getElementById('seconds').innerHTML = centsToday;
-            document.getElementById('cents').innerHTML = Math.floor(now.getMilliseconds() / 10);
-            document.getElementById('days').innerHTML = days;
-        }, 1000 / 60);
+        if ((new Date()) <= new Date('April 13, 2016')) {
+            setInterval(function () {
+                var now = new Date(),
+                    dayX = new Date('April 13, 2016'),
+                    timeDifference = now.getTimezoneOffset() * 60 * 1000,
+                    msPerDay = 60 * 60 * 24 * 1000,
+                    centsPerDay = 60 * 60 * 24 * 100,
+                    centsToday = Math.floor((dayX.getTime() - now.getTime() - timeDifference) / 1000),
+                    days = Math.floor(((dayX.getTime() - now.getTime() - timeDifference) /
+                        (centsPerDay * 10)) * 100000) / 100000;
+                document.getElementById('seconds').innerHTML = centsToday;
+                document.getElementById('cents').innerHTML = Math.floor(now.getMilliseconds() / 10);
+                document.getElementById('days').innerHTML = days;
+            }, 1000 / 60);
+        } else {
+            document.getElementsByTagName('main').innerHTML = '<p>
+            <b><span id="seconds">❤ To chegando tatiiiii! ❤</span></b></p>''
+            </p>'
+        }
     </script>
 </body>
 </html>
