@@ -25,13 +25,13 @@ $(document).ready(function() {
             var temp = json['main']['temp'];
             var location = json['name'];
             var currentWeather = json['weather'][0]['description'];
-            var icon = 'http://openweathermap.org/img/w/' + json['weather'][0]['icon'] + '.png';
+            var icon = 'http://jlouiss.github.io/weather/icons/' + json['weather'][0]['icon'] + '.svg';
             var windSpeed = json['wind']['speed'];
             var windDirection = json['wind']['deg'];
             var weatherId = json['weather'][0]['id'];
 
             $('#temperature').html(temp);
-            $('#icon').html('<img src="' + icon + '"></img>')
+            $('#icon').attr('src', icon);
             $('#location').html(location);
             $('#weather').html(currentWeather);
             $('#wind').html(windSpeed + ' - ' + windDirection);
@@ -41,29 +41,3 @@ $(document).ready(function() {
             location. :(');
     });
 });
-
-/*
-if (navigator.geolocation) {
-    var latitude;
-    var longitude;
-    navigator.geolocation.getCurrentPosition(function(position) {
-        latitude = position.coords.latitude;
-        longitude = position.coords.longitude;
-        var url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude + '&appid=aacd3d4cc5a1e8c3a2829fae92681ba2';
-        $.getJSON(url, function(json) {
-            var temp = ktoF(json['main']['temp']);
-            var city = json['name'];
-            var currentWeather = json['weather'][0]['description'];
-            var icon = 'http://openweathermap.org/img/w/' + json['weather'][0]['icon'] + '.png';
-            var windSpeed = msToMPH(json['wind']['speed']);
-            var windDirection = degToDir(json['wind']['deg']);
-            var weatherCode = json['weather'][0]['id'];
-            setBackground(weatherCode);
-            $('.temp').html('<span class='data'><img class='icon' src=' + icon + '></img>' + temp + '</span>');
-            $('.city').html('<b>' + city + '</b>');
-            $('.weather').html('<b>' + currentWeather + '</b>');
-            $('.wind').html('<b>' + windSpeed + ' ' + windDirection + '</b>');
-        });
-    });
-}
-*/
