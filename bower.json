@@ -1,0 +1,28 @@
+{
+  "name": "jlouiss.github.io",
+  "homepage": "https://github.com/jlouiss/jlouiss.github.io",
+  "authors": [
+    "jlouiss <jlsalbego@gmail.com>"
+  ],
+  "description": "my portfolio",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "portfolio"
+  ],
+  "license": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "fontawesome#^4.5.0"
+  }
+}
