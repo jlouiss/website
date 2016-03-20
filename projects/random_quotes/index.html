@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="Jean Louis Salbego">
+
+    <title>Random Quotes</title>
+
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row header-content text-center">
+            <h1>Random Quotes</h1>
+        </div>
+
+        <div class="row">
+            <div class="text-center">
+                <a href="https://twitter.com/share" class="text-center twitter-share-button" {count} data-text="Awesome Random Quotes" data-via="jlslbg" data-size="small">Tweet</a>
+                <script>
+                    ! function (d, s, id) {
+                        var js,
+                            fjs = d.getElementsByTagName(s)[0],
+                            p = /^http:/.test(d.location) ? 'http' : 'https';
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = p + '://platform.twitter.com/widgets.js';
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }
+                    (document, 'script', 'twitter-wjs');
+                </script>
+            </div>
+
+            <div class="col-xs-8 col-xs-offset-2" id="quote-container">
+                <i id="quote" class="text-center"></i>
+                <br>
+                <br>
+                <br>
+                <p id="author" class="pull-right"></p>
+            </div>
+        </div>
+
+        <div class="row text-center" id="btn-container">
+            <div>
+                <button class="btn btn-lg">Generate</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p class="text-muted text-center">Copyright ©
+            <a href="http://jlouiss.github.io/">Jean Louis Salbego</a> 2016</p>
+    </div>
+
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/quotes.js"></script>
+</body>
+
+</html>

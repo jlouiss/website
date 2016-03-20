@@ -1,0 +1,42 @@
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.description {
+  font-size: 28px;
+  font-weight: 200;
+}
+
+.number {
+  font-family: "Open Sans", sans-serif;
+  font-size: 89px;
+  font-weight: 300;
+  display: inline-block;
+}
+
+#secondsLeft {
+  font-size: 119px;
+}
+
+#cents {
+  font-size: 37px;
+}
+
+.row, .jumbotron {
+  margin-bottom: 67px;
+}
+
+footer {
+  background-color: #eee;
+  padding: 28px;
+  font-size: 18px;
+}
+
+a {
+  color: #000;
+}
+a:link, a:visited {
+  color: #000;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Martel+Sans:300,600);
+:root {
+  font-size: 24px;
+}
+
+body {
+  font-family: "Martel Sans", sans-serif;
+  font-size: 1rem;
+  color: #ddd;
+  background-color: #343436;
+  background-color: #676769;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-top: 1.5rem;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.6), 0 0 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+img {
+  margin: 2rem auto;
+  max-width: 8rem;
+  max-height: 8rem;
+}
+
+.temperature {
+  color: #ddd;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  color: #666;
+  background-color: #bbb;
+  width: 100%;
+  padding-bottom: 0.7rem;
+  box-shadow: 0 0 12px black;
+}
+footer p {
+  font-size: 0.5rem;
+  padding-top: 1rem;
+}
+footer small {
+  font-size: 0.45rem;
+}
+footer a, footer a:hover, footer a:link, footer a:visited {
+  font-size: 1em;
+  text-decoration: none;
+  color: #000;
+}
+
+/*# sourceMappingURL=style.css.map */

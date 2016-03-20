@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jean Louis Salbego">
+
+    <title>Life Timepiece</title>
+
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1 class="text-primary">Life Timepiece</h1>
+    </div>
+
+    <div class="container text-center">
+        <div class="row row-content">
+            <span class="number" id="secondsLeft"></span>
+            <span class="number text-muted" id="cents"></span>
+
+            <p class="text-muted description">Seconds Left Today</p>
+        </div>
+
+        <div class="row row-content">
+            <span class="number" id="ageInDays"></span>
+
+            <p class="text-muted description">My age in days</p>
+        </div>
+
+        <div class="row row-content">
+            <span class="number" id="daysLeft"></span>
+
+            <p class="text-muted description">Days Left This Year</p>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-center">
+                <a href="http://jlouiss.github.io/">Jean Louis Salbego</a> - 2016
+            </p>
+        </div>
+    </footer>
+
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="time.js"></script>
+</body>
+
+</html>
