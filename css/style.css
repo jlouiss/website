@@ -7,6 +7,7 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
   font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
   color: #5F5C4D;
 }
 body h1 {
@@ -21,7 +22,6 @@ body > .container h1 {
 }
 
 .jumbotron {
-  font-weight: 800;
   color: #fff;
   text-shadow: 1px 2px 3px rgba(50, 50, 50, 0.6);
   box-shadow: 0 0 28px black inset;
