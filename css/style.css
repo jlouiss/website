@@ -43,22 +43,23 @@ body > .container .row {
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: 3.4rem;
+  bottom: 4rem;
   margin: 0 auto;
-}
-body > .container .row p {
-  margin-top: 1.5rem;
 }
 body > .container .row .btn {
   width: 9rem;
-  padding: auto;
-  margin: 0.2rem auto;
+  margin-bottom: 0.6rem;
+  border: 0.05rem solid #bcbcbc;
+  box-shadow: 0 1px 4px #424242;
   font-size: 0.8rem;
 }
 @media only screen and (max-width: 480px) {
   body > .container .row .btn {
     font-size: 0.8rem;
   }
+}
+body > .container p {
+  margin-top: 7rem;
 }
 
 .jumbotron {
