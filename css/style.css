@@ -36,8 +36,9 @@ body h1 {
 body > .container h1 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 200;
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin: 4rem auto;
+  text-shadow: 0.04rem 0.1rem 0.125rem #bcbcbc;
 }
 body > .container .row {
   position: absolute;
@@ -50,7 +51,7 @@ body > .container .row .btn {
   width: 9rem;
   margin-bottom: 0.6rem;
   border: 0.05rem solid #bcbcbc;
-  box-shadow: 0 1px 4px #424242;
+  box-shadow: 0 0.1rem 0.125rem #424242;
   font-size: 0.8rem;
 }
 @media only screen and (max-width: 480px) {
@@ -64,7 +65,7 @@ body > .container p {
 
 .jumbotron {
   color: #e9e9e9;
-  text-shadow: 0.04rem 0.08rem 0.125rem rgba(50, 50, 50, 0.6);
+  text-shadow: 0.04rem 0.1rem 0.125rem #424242;
   box-shadow: 0 0 0.8rem #424242;
   background-color: #ff9900;
   margin-bottom: 0;
@@ -78,9 +79,14 @@ body > .container p {
   height: 3rem;
   color: #e9e9e9;
   background-color: #3299bb;
+  text-shadow: 0.04rem 0.1rem 0.125rem #424242;
   box-shadow: 0 0 0.8rem #424242;
 }
 .footer a, .footer a:hover, .footer a:link, .footer a:visited {
+  color: #e9e9e9;
+}
+.footer i {
+  font-size: 1.2rem;
   color: #e9e9e9;
 }
 
