@@ -5,8 +5,7 @@ $(document).ready(function () {
         sPerDay = 60 * 60 * 24,
         centsPerDay = sPerDay * 100,
         msPerDay = sPerDay * 1000,
-        birthDate = new Date('July 18, 1994'),
-        birthDate = new Date('August 28, 1999');
+        birthDate = new Date('July 18, 1994');
 
     // 2 digit numbers
     function pad2(number) {
