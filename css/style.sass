@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200|Source+Sans+Pro:200)
 \:root
   font-size: 18px
-  @media only screen and (max-width: 767px)
+  @media (max-width: 767px)
     font-size: 14px
-  @media only screen and (min-width: 1980px)
+  @media (min-width: 1980px)
     font-size: 24px
 
 $black: #424242
@@ -12,10 +12,10 @@ $grey: #bcbcbc
 $blue: #3299bb
 $orange: #ff9900
 
-html
+html, body
   position: relative
   min-height: 720px
-  min-width: 200px
+  min-width: 230px
 
 *
   font-size: 0.8rem
@@ -77,5 +77,9 @@ body
 footer div
   /* ehhh...
   background-color: $blue
-  div
-    margin-top: 1rem
+  @media (max-width: 767px)
+    div:first-of-type
+      margin-top: 1rem
+  @media (min-width: 768px)
+    div
+      margin-top: 1rem

@@ -2,21 +2,21 @@
 :root {
   font-size: 18px;
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   :root {
     font-size: 14px;
   }
 }
-@media only screen and (min-width: 1980px) {
+@media (min-width: 1980px) {
   :root {
     font-size: 24px;
   }
 }
 
-html {
+html, body {
   position: relative;
   min-height: 720px;
-  min-width: 200px;
+  min-width: 230px;
 }
 
 * {
@@ -94,8 +94,15 @@ footer div {
   /* ehhh... */
   background-color: #3299bb;
 }
-footer div div {
-  margin-top: 1rem;
+@media (max-width: 767px) {
+  footer div div:first-of-type {
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  footer div div {
+    margin-top: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
