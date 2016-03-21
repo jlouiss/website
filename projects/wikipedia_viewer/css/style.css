@@ -1,3 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab);
+:root {
+  font-size: 50px;
+}
 
+* {
+  font-size: 2rem;
+}
 
 /*# sourceMappingURL=style.css.map */
