@@ -25,13 +25,15 @@ var quotes = [
      'Henry Collins']
 ];
 
-var dist = Array(8).join().split('');
-
 function generate() {
-    var rand = Math.floor(Math.random() * quotes.length);
+    // random looking behavior: the function uses dist to store the last 8
+    // quotes to avoid too frequent repetitions
+    var dist = Array(8).join().split(''),
+        rand = Math.floor(Math.random() * quotes.length);
     console.log(rand);
-    if (dist.indexOf(rand) >= 0) generate();
-    else {
+    if (dist.indexOf(rand) >= 0) {
+        generate();
+    } else {
         var quote = quotes[rand][0],
             author = '- ' + quotes[rand][1] + ' -';
         $('#quote').html(quote);
@@ -45,6 +47,6 @@ function generate() {
 $(document).ready(function () {
     generate();
     $('button').click(function () {
-        generate()
+        generate();
     });
 });
