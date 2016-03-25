@@ -12,9 +12,19 @@
     <link href="css/style.css" rel="stylesheet"/>
   </head>
   <body>
-    <h1 id="title" class="text-center text-primary">Wikipedia Viewer</h1>
+    <h1 id="title" class="text-center">I want to know about...</h1>
     <div class="container">
-      <div class="col-xs-12 results"></div>
+      <div class="row text-center">
+        <div id="wrapper">
+          <div id="search" class="fix">
+            <div class="icon">
+              <input type="text"/><a href="#"><i class="fa fa-search fa-fw"></i></a>
+            </div>
+          </div>
+          <div id="random" class="fix"><a href="#">
+              <div class="icon"><i class="fa fa-wikipedia-w fa-fw"></i><span>Random Page</span></div></a></div>
+        </div>
+      </div>
     </div>
     <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="js/wikipedia.js"></script>

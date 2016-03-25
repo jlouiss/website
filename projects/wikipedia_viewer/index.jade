@@ -1,20 +1,32 @@
 html(lang='en')
-    head
-        meta(charset='utf-8')
-        meta(http-equiv='X-UA-Compatible', content='IE=Edge')
-        meta(name='viewport', content='width=device-width,initial-scale=1')
-        meta(name='author', content='Jean Louis Salbego')
-        
-        title Wikipedia Viewer
-        
-        link(rel='EditURI', type='application/rsd+xml', href='//www.mediawiki.org/w/api.php?action=rsd')
-        link(href='../../bower_components/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
-        link(href='../../bower_components/font-awesome/css/font-awesome.min.css', rel='stylesheet')
-        link(href='css/style.css', rel='stylesheet')
-        
-    body
-        h1.text-center.text-primary#title Wikipedia Viewer
-        div.container
-            div.col-xs-12.results
-        script(src='../../bower_components/jquery/dist/jquery.min.js')
-        script(src='js/wikipedia.js')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    meta(name='author', content='Jean Louis Salbego')
+
+    title Wikipedia Viewer
+
+    link(rel='EditURI', type='application/rsd+xml', href='//www.mediawiki.org/w/api.php?action=rsd')
+    link(href='../../bower_components/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+    link(href='../../bower_components/font-awesome/css/font-awesome.min.css', rel='stylesheet')
+    link(href='css/style.css', rel='stylesheet')
+
+  body
+    h1.text-center#title I want to know about...
+
+    div.container
+      div.row.text-center
+        div#wrapper
+          div.fix#search
+            div.icon
+              input(type='text')
+              a(href='#')
+                i.fa.fa-search.fa-fw
+          div.fix#random
+            a(href='#')
+              div.icon
+                i.fa.fa-wikipedia-w.fa-fw
+                span Random Page
+    script(src='../../bower_components/jquery/dist/jquery.min.js')
+    script(src='js/wikipedia.js')
