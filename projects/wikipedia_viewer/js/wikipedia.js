@@ -9,6 +9,7 @@ $(document).ready(function() {
     } else {
       $('#wrapper').removeClass('active');
       $('#title').html('I want to know about...');
+      $('#results').empty();
       $('#results').hide();
     }
   };
@@ -17,6 +18,7 @@ $(document).ready(function() {
     var criteria = getCrit();
 
     if (criteria) {
+      $('#results').empty();
       $('#results').show();
       $('#wrapper').addClass('active');
 
