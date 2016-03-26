@@ -2,41 +2,54 @@
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.description {
-  font-size: 28px;
-  font-weight: 200;
+#heading {
+  background-color: #112329;
+  margin-bottom: 50px;
 }
 
-.number {
-  font-family: "Open Sans", sans-serif;
-  font-size: 89px;
-  font-weight: 300;
-  display: inline-block;
+#title {
+  color: #fff;
+  font-family: "Arvo", serif;
+  font-size: 67px;
+  letter-spacing: 5px;
+  margin: 67px auto;
 }
 
-#secondsLeft {
-  font-size: 119px;
+#content {
+  box-shadow: 0 0 5px #0b4b5e;
+  padding-bottom: 28px;
 }
 
-#cents {
-  font-size: 37px;
+.frame {
+  margin-bottom: 37px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  border-radius: 5px;
 }
 
-.row, .jumbotron {
-  margin-bottom: 67px;
-}
-
-footer {
-  background-color: #eee;
-  padding: 28px;
-  font-size: 18px;
+img {
+  margin-bottom: 12px;
 }
 
 a {
-  color: #000;
+  text-decoration: none;
 }
-a:link, a:visited {
-  color: #000;
+a:hover {
+  text-decoration: none;
+}
+
+footer {
+  background-color: #112329;
+  padding: 16px 0;
+  color: #aaa;
+  font-size: 14px;
+}
+footer a {
+  color: #aaa;
+  text-decoration: underline;
+}
+footer a:hover {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
