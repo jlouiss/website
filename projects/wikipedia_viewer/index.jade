@@ -8,25 +8,27 @@ html(lang='en')
     title Wikipedia Viewer
 
     link(rel='EditURI', type='application/rsd+xml', href='//www.mediawiki.org/w/api.php?action=rsd')
-    link(href='../../bower_components/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
     link(href='../../bower_components/font-awesome/css/font-awesome.min.css', rel='stylesheet')
     link(href='css/style.css', rel='stylesheet')
 
   body
     h1.text-center#title I want to know about...
+    //- h1 Aliquam eu accumsan turpis. Donec rhoncus blandit consequat. Cras facilisis felis arcu, in tincidunt quam commodo quis. Nullam vel odio placerat, vestibulum neque eu, lobortis justo. Donec non lorem vitae dolor volutpat pellentesque sed at tortor. Integer sed fermentum dui, ac aliquet velit. Proin vestibulum odio nec ante rutrum, et hendrerit nisl blandit. Aenean vitae orci id ex finibus rutrum. Nam porta id leo ut pretium.
+    div.text-center#wrapper
+      div#search
+        div.icon
+          input(type='text')
+          a(href='#')
+            i.fa.fa-search.fa-fw
+      div#results
+      div#random
+        a(href='http://en.wikipedia.org/wiki/Special:Random' target='_blank')
+          div.icon
+            i.fa.fa-wikipedia-w.fa-fw
+            span Something
+    footer
+      small Written and coded by 
+        a(href='http://jlouiss.github.io/' target='_blank') Jean Louis Salbego
 
-    div.container
-      div.row.text-center
-        div#wrapper
-          div.fix#search
-            div.icon
-              input(type='text')
-              a(href='#')
-                i.fa.fa-search.fa-fw
-          div.fix#random
-            a(href='#')
-              div.icon
-                i.fa.fa-wikipedia-w.fa-fw
-                span Random Page
     script(src='../../bower_components/jquery/dist/jquery.min.js')
     script(src='js/wikipedia.js')

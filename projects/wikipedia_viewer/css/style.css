@@ -1,11 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text|Lato:300);
 :root {
   font-size: 30px;
 }
 
 * {
   font-size: 1rem;
-  font-family: "Raleway", serif;
+  font-family: "Crimson Text", serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -14,45 +14,61 @@
   transition: all 500ms ease-out;
 }
 
+html {
+  position: relative;
+  min-height: 700px;
+  min-width: 200px;
+}
+
 body {
-  background-color: #12D4F2;
-  color: #fff;
+  background-color: #FEFDFF;
+  color: #383838;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  color: #383838;
+  text-decoration: none;
 }
 
 h1 {
   font-size: 2rem;
-  font-family: "Roboto Slab", serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: #49347F;
 }
 
 #title {
   font-size: 2.5rem;
-  font-family: "Raleway", sans-serif;
+  font-family: "Crimson Text", serif;
+  margin-top: 0.8rem;
 }
 
 #wrapper {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 0;
   width: 100%;
 }
 
-.fix {
-  width: 11rem;
+#search, #random {
   margin: 0.3rem auto;
+}
+
+#search {
+  width: 11rem;
+}
+
+#random {
+  width: 8rem;
 }
 
 .icon {
   width: 2rem;
   height: 2rem;
   margin: 0 auto;
-  border: 0.1rem solid #fff;
+  border: 0.1rem solid #383838;
   border-radius: 1rem;
   vertical-align: middle;
-}
-
-a, a:link, a:visited, a:hover, a:active {
-  color: #fff;
-  text-decoration: none;
 }
 
 #search i {
@@ -65,6 +81,9 @@ a, a:link, a:visited, a:hover, a:active {
   outline-width: 0px;
 }
 
+#random {
+  padding-bottom: 2rem;
+}
 #random .icon {
   display: inline-block;
   white-space: nowrap;
@@ -76,7 +95,7 @@ a, a:link, a:visited, a:hover, a:active {
 }
 #random span {
   display: inline-block;
-  width: 8rem;
+  width: 5rem;
 }
 
 #search:hover .icon {
@@ -87,7 +106,44 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 #random:hover .icon {
-  width: 10rem;
+  width: 7rem;
+}
+
+#results {
+  position: relative;
+  margin: 2rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0.4rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #7AB039;
+}
+footer small {
+  font-size: 0.6rem;
+}
+footer a {
+  font-size: 0.6rem;
+}
+
+.active {
+  position: relative !important;
+  top: 0 !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 /*# sourceMappingURL=style.css.map */

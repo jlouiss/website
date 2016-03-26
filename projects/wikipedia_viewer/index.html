@@ -7,25 +7,22 @@
     <meta name="author" content="Jean Louis Salbego"/>
     <title>Wikipedia Viewer</title>
     <link rel="EditURI" type="application/rsd+xml" href="//www.mediawiki.org/w/api.php?action=rsd"/>
-    <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
   </head>
   <body>
     <h1 id="title" class="text-center">I want to know about...</h1>
-    <div class="container">
-      <div class="row text-center">
-        <div id="wrapper">
-          <div id="search" class="fix">
-            <div class="icon">
-              <input type="text"/><a href="#"><i class="fa fa-search fa-fw"></i></a>
-            </div>
-          </div>
-          <div id="random" class="fix"><a href="#">
-              <div class="icon"><i class="fa fa-wikipedia-w fa-fw"></i><span>Random Page</span></div></a></div>
+    <div id="wrapper" class="text-center">
+      <div id="search">
+        <div class="icon">
+          <input type="text"/><a href="#"><i class="fa fa-search fa-fw"></i></a>
         </div>
       </div>
+      <div id="results"></div>
+      <div id="random"><a href="http://en.wikipedia.org/wiki/Special:Random" target="_blank">
+          <div class="icon"><i class="fa fa-wikipedia-w fa-fw"></i><span>Something</span></div></a></div>
     </div>
+    <footer><small>Written and coded by <a href="http://jlouiss.github.io/" target="_blank">Jean Louis Salbego</a></small></footer>
     <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="js/wikipedia.js"></script>
   </body>
