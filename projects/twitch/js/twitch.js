@@ -1,3 +1,9 @@
+// bootsrap tabs
+$('#myTabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+});
+
 $(document).ready(function() {
   var streamers = ["freecodecamp", "storbeck", "terakilobyte", "habathcx",
     "RobotCaleb", "thomasballinger", "noobs2ninjas", "beohoff"];

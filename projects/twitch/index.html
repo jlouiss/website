@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="author" content="Jean Louis Salbego">
 
-    <title>Twitch.tv Viewer</title>
+    <title>Twitch Streams Viewer</title>
 
     <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
@@ -14,16 +14,62 @@
   </head>
 
   <body>
-    <div class="container text-center">
-      <h1 class="text-primary">Twitch.tv Viewer</h1>
+    <div class="container">
+      <h1 class="text-center">Twitch.tv Streams</h1>
+
       <div class="row">
         <div class="col-xs-12">
 
+          <!-- tabs -->
+          <div>
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active">
+                <a class="active" href="#online" aria-controls="online" role="tab" data-toggle="tab">
+                  Online
+                </a>
+              </li>
+
+              <li role="presentation">
+                <a href="#offline" aria-controls="offline" role="tab" data-toggle="tab">
+                  Offline
+                </a>
+              </li>
+
+              <li role="presentation">
+                <a href="#all" aria-controls="all" role="tab" data-toggle="tab">
+                  All
+                </a>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane fade in active" id="online">
+                TEST 111
+              </div>
+
+              <div role="tabpanel" class="tab-pane fade" id="offline">
+                TEST 222
+              </div>
+
+              <div role="tabpanel" class="tab-pane fade" id="all">
+                TEST 333
+              </div>
+            </div>
+          </div>
+          <!-- end tabs -->
+
         </div>
       </div>
+
     </div>
 
     <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+
+    </script>
+
     <script src="js/twitch.js"></script>
   </body>
 </html>
