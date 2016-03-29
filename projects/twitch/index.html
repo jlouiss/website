@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,65 +11,81 @@
     <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-  </head>
+</head>
 
-  <body>
+<body ng-app="twitchViewer">
     <div class="container">
-      <h1 class="text-center">Twitch.tv Streams</h1>
 
-      <div class="row">
-        <div class="col-xs-12">
-
-          <!-- tabs -->
-          <div>
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active">
-                <a class="active" href="#online" aria-controls="online" role="tab" data-toggle="tab">
-                  Online
-                </a>
-              </li>
-
-              <li role="presentation">
-                <a href="#offline" aria-controls="offline" role="tab" data-toggle="tab">
-                  Offline
-                </a>
-              </li>
-
-              <li role="presentation">
-                <a href="#all" aria-controls="all" role="tab" data-toggle="tab">
-                  All
-                </a>
-              </li>
-            </ul>
-
-            <div class="tab-content">
-              <div role="tabpanel" class="tab-pane fade in active" id="online">
-                TEST 111
-              </div>
-
-              <div role="tabpanel" class="tab-pane fade" id="offline">
-                TEST 222
-              </div>
-
-              <div role="tabpanel" class="tab-pane fade" id="all">
-                TEST 333
-              </div>
+        <h1 class="text-center">Twitch.tv Streams</h1>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-sm-push-8">
+                <input type="text" class="form-control text-right" ng-model="search" ng-model-options="{debounce: 650}" placeholder="Channel name">
+                <p>{{search}}</p>
             </div>
-          </div>
-          <!-- end tabs -->
-
         </div>
-      </div>
+
+        <div class="row">
+            <div class="col-xs-12" ng-controller="mainController">
+
+                <!-- tabs -->
+                <div>
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a class="active" href="#online" aria-controls="online" role="tab" data-toggle="tab">
+                                Online
+                            </a>
+                        </li>
+
+                        <li role="presentation">
+                            <a href="#offline" aria-controls="offline" role="tab" data-toggle="tab">
+                                Offline
+                            </a>
+                        </li>
+
+                        <li role="presentation">
+                            <a href="#all" aria-controls="all" role="tab" data-toggle="tab">
+                                All
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="online">
+                            <div class="channel" ng-repeat="channel in online">
+                                <h1>{{channel}}</h1>
+                            </div>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane fade" id="offline">
+                            <div class="channel" ng-repeat="channel in offline">
+                                <h1>{{channel}}</h1>
+                            </div>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane fade" id="all">
+                            <div class="channel" ng-repeat="channel in streamers">
+                                <h1>{{channel}}</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end tabs -->
+
+            </div>
+            <!-- .col-xs-12 controller -->
+        </div>
+        <!-- row -->
 
     </div>
 
     <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../bower_components/angular/angular.min.js"></script>
 
-    <script>
-
-    </script>
-
-    <script src="js/twitch.js"></script>
-  </body>
+    <!-- <script src="js/twitch.js"></script> -->
+    <script src="js/scripts/app.js"></script>
+    <script src="js/scripts/controllers.js"></script>
+</body>
 </html>
