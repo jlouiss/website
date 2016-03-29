@@ -1,14 +1,14 @@
 $(document).ready(function() {
   var pomodoro = 25,
-    pause = 5,
-    time = 0,
-    mins = 0,
-    secs = 0,
-    interval = 100, // ms
-    select = false, // false = pomodoro, true = break
-    timer,
-    check = false,
-    alarm = document.createElement('audio');
+      pause = 5,
+      time = 0,
+      mins = 0,
+      secs = 0,
+      interval = 100, // ms
+      select = false, // false = pomodoro, true = break
+      timer,
+      check = false,
+      alarm = document.createElement('audio');
 
   alarm.setAttribute('src', 'http://www.soundjay.com/button/beep-07.mp3');
 
