@@ -1,9 +1,19 @@
+*
+  -webkit-transition: 450ms ease-in-out
+  -moz-transition: 450ms ease-in-out
+  -ms-transition: 450ms ease-in-out
+  transition: 450ms ease-in-out
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
 body, html
   background-color: #FF964D
   height: 100%
   width: 100%
   color: #fff
-  font-family: 'Source Sans Pro', sans-serif
+  font-family: "Source Sans Pro", sans-serif
   font-weight: 200
 
 header h1
@@ -20,12 +30,16 @@ a
     color: #fff
 
 #circle
-  border: 1px solid #fff
+  border: 2px solid #fff
   border-radius: 50%
   height: 477px
   width: 477px
   float: none
   margin: 0 auto
+  cursor: pointer
+  box-shadow: 0 0 8px rgba(0, 0, 0, 1) inset
+  &:hover
+    box-shadow: 0 0 8px rgba(0, 0, 0, 1) inset, 0 0 15px rgba(0, 0, 0, 0.6) inset
 
 #time
   padding-top: 159px
@@ -48,7 +62,10 @@ a
   border: 1px solid #fff
   border-radius: 15px
   padding: 5px 20px
-  margin-top: 28px
+  margin-top: 36px
+  cursor: pointer
+  &:hover
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5), 0 0 8px rgba(0, 0, 0, 0.3)
   &:active
     background-color: #ee853c
 
@@ -61,12 +78,6 @@ a
     &:hover
       color: #fff
       text-decoration: none
-
-*
-  -webkit-user-select: none
-  -moz-user-select: none
-  -ms-user-select: none
-  user-select: none
 
 @media screen and (max-width: 767px)
   header h1

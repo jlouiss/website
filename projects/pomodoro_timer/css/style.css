@@ -1,3 +1,14 @@
+* {
+  -webkit-transition: 450ms ease-in-out;
+  -moz-transition: 450ms ease-in-out;
+  -ms-transition: 450ms ease-in-out;
+  transition: 450ms ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 body, html {
   background-color: #FF964D;
   height: 100%;
@@ -24,12 +35,17 @@ a:hover, a:link, a:focus {
 }
 
 #circle {
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   border-radius: 50%;
   height: 477px;
   width: 477px;
   float: none;
   margin: 0 auto;
+  cursor: pointer;
+  box-shadow: 0 0 8px black inset;
+}
+#circle:hover {
+  box-shadow: 0 0 8px black inset, 0 0 15px rgba(0, 0, 0, 0.6) inset;
 }
 
 #time {
@@ -57,7 +73,11 @@ a:hover, a:link, a:focus {
   border: 1px solid #fff;
   border-radius: 15px;
   padding: 5px 20px;
-  margin-top: 28px;
+  margin-top: 36px;
+  cursor: pointer;
+}
+#reset:hover {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5), 0 0 8px rgba(0, 0, 0, 0.3);
 }
 #reset:active {
   background-color: #ee853c;
@@ -74,13 +94,6 @@ a:hover, a:link, a:focus {
 .footer a:hover {
   color: #fff;
   text-decoration: none;
-}
-
-* {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 @media screen and (max-width: 767px) {
