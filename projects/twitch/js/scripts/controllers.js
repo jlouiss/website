@@ -2,7 +2,7 @@
 
 angular.module('twitchViewer')
 
-.controller('mainController', ['$scope', '$http', function($scope, $http) {
+.controller('MainController', ['$scope', '$http', function($scope, $http) {
     var requestURL = 'https://api.twitch.tv/kraken/streams/',
         search = '';
 

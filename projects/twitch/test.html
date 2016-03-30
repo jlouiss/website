@@ -1,4 +1,4 @@
-<html>
+<html ng-app="app">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -10,12 +10,12 @@
         <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
     </head>
-    <body ng-app="app">
+    <body ng-controller="TestController">
         <div class="jumbotron text-center">
             <h1>Testing AngularJS</h1>
         </div>
 
-        <div class="container" ng-controller="testController">
+        <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
                     <div class="test">
@@ -23,37 +23,47 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <section class="tab" ng-controller="TabController">
+                        <ul class="nav nav-pills">
+                            <li ng-class="{active: setTab('online')}">
+                                <a href ng-click="tab">Online</a>
+                            </li>
+                            <li ng-class="{active: setTab('offline')}">
+                                <a href ng-click="tab">Offline</a>
+                            </li>
+                            <li ng-class="{active: setTab('all')}">
+                                <a href ng-click="tab">All</a>
+                            </li>
+                        </ul>
+
+                        <div ng-show="isSet('online')">
+                            <div ng-repeat="streamer in streamers">
+                                <h3>{{streamer}}</h3>
+                            </div>
+                        </div>
+                        <div ng-show="isSet('offline')">
+                            <div ng-repeat="streamer in streamers">
+                                <h3>{{streamer}}</h3>
+                            </div>
+                        </div>
+                        <div ng-show="isSet('all')">
+                            <div ng-repeat="streamer in streamers">
+                                <h3>{{streamer}}</h3>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
         </div>
 
         <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
         <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="../../bower_components/angular/angular.min.js"></script>
 
-        <script>
-            angular.module('app', []);
-
-            angular.module('app').controller('testController', [
-                '$scope',
-                function ($scope) {
-                    var streamers = [
-                        "freecodecamp",
-                        "storbeck",
-                        "terakilobyte",
-                        "habathcx",
-                        "RobotCaleb",
-                        "thomasballinger",
-                        "noobs2ninjas",
-                        "beohoff",
-                        // should be online
-                        "Skipnh0",
-                        "hastad",
-                        "RageFu",
-                        "NWGamesBrasil"
-                    ];
-
-                    $scope.streamers = streamers;
-                }
-            ]);
-        </script>
+        <script src="test.js"></script>
     </body>
 </html>
