@@ -16,7 +16,7 @@ var pad2 = function(number) {
     return (number < 10 ? '0' : '') + number;
 };
 
-// resets pomodoro to 25 and pause to 5
+// resets pomodoro and pause to user's chosen length
 var reset = function() {
     clearInterval(timer);
 
