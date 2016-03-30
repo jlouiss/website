@@ -18,6 +18,7 @@ html {
   position: relative;
   min-height: 700px;
   min-width: 200px;
+  height: 100%;
 }
 
 body {
