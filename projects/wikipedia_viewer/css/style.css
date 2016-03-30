@@ -146,4 +146,12 @@ footer a {
   text-align: right;
 }
 
+.active-search {
+  width: 10rem !important;
+}
+
+.active-input {
+  width: 8rem !important;
+}
+
 /*# sourceMappingURL=style.css.map */
