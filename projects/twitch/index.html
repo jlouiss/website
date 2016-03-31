@@ -1,90 +1,135 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="author" content="Jean Louis Salbego">
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="author" content="Jean Louis Salbego">
 
-    <title>Twitch Streams Viewer</title>
+        <title>Twitch Streams Viewer</title>
 
-    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body ng-app="twitchViewer">
-    <div class="container">
-
-        <h1 class="text-center">Twitch.tv Streams</h1>
-        <div class="row">
-            <div class="col-xs-12 col-sm-4 col-sm-push-8">
-                <input type="text" class="form-control text-right" ng-model="search" ng-model-options="{debounce: 650}" placeholder="Channel name">
-                <p>{{search}}</p>
-            </div>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body ng-controller="MainController">
+        <div class="jumbotron text-center">
+            <h1>Top Twitch Streamers</h1>
         </div>
 
-        <div class="row">
-            <div class="col-xs-12" ng-controller="MainController">
+        <div class="container">
+            <div class="row">
 
-                <!-- tabs -->
-                <div>
+                <div class="col-xs-12">
+                    <section ng-controller="TabController">
+                        <ul class="nav nav-pills">
+                            <li ng-class="{active: isSet('online')}">
+                                <a href ng-click="setTab('online')">
+                                    <i class="fa fa-twitch"></i>
+                                    Online
+                                </a>
+                            </li>
+                            <li ng-class="{active: isSet('offline')}">
+                                <a href ng-click="setTab('offline')">
+                                    <i class="fa fa-times-circle"></i>
+                                    Offline
+                                </a>
+                            </li>
+                            <li ng-class="{active: isSet('all')}">
+                                <a href ng-click="setTab('all')">
+                                    <i class="fa fa-bars"></i>
+                                    All
+                                </a>
+                            </li>
+                        </ul>
 
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active">
-                            <a class="active" href="#online" aria-controls="online" role="tab" data-toggle="tab">
-                                Online
-                            </a>
-                        </li>
+                        <hr>
 
-                        <li role="presentation">
-                            <a href="#offline" aria-controls="offline" role="tab" data-toggle="tab">
-                                Offline
-                            </a>
-                        </li>
+                        <div ng-show="isSet('online')">
+                            <div ng-repeat="streamer in streamers" ng-if="streamer.online">
+                                <div class="media">
 
-                        <li role="presentation">
-                            <a href="#all" aria-controls="all" role="tab" data-toggle="tab">
-                                All
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active" id="online">
-                            <div class="channel" ng-repeat="channel in online">
-                                <h1>{{channel}}</h1>
+                                    <div class="media-left">
+                                        <a href="{{streamer.data.channel.url}}" target="_blank">
+                                            <img class="media-object img-thumbnail profile-img" ng-src="{{streamer.data.channel.logo}}" alt="{{streamer.name}}">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading">
+                                            <h3 class="streamer">{{streamer.name}}</h3>
+                                            <br>
+                                            <small>
+                                                Status:
+                                                <i class="text-muted">{{streamer.data.channel.status}}</i>
+                                                <br>
+                                                Viewers:
+                                                {{streamer.data.viewers}}
+                                                <br>
+                                                Language:
+                                                {{streamer.data.channel.broadcaster_language}}
+                                            </small>
+                                        </div>
+                                        <a href="{{streamer.data.channel.url}}" target="_blank">
+                                            <figure class="figure">
+                                                <img class="img-thumbnail img-responsive visible-xs" ng-src="{{streamer.data.preview.small}}">
+                                                <img class="img-thumbnail img-responsive visible-sm" ng-src="{{streamer.data.preview.medium}}">
+                                                <img class="img-thumbnail img-responsive visible-md visible-lg" ng-src="{{streamer.data.preview.large}}">
+
+                                                <figcaption class="figure-caption">
+                                                    {{'Playing: ' + streamer.data.channel.game}}
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
 
-                        <div role="tabpanel" class="tab-pane fade" id="offline">
-                            <div class="channel" ng-repeat="channel in offline">
-                                <h1>{{channel}}</h1>
+                        <div ng-show="isSet('offline')">
+                            <p class="text-muted">These streamers are currently offline.</p>
+                            <div ng-repeat="streamer in streamers" ng-if="!streamer.online">
+                                <h3 class="streamer offline">
+                                    {{streamer.name}}
+                                    <i class="fa fa-exclamation-circle" ng-if="!streamer.exists" title="Inexistent or deleted account"></i>
+                                </h3>
+                            </div>
+                            <p class="text-muted">These streamers are currently offline.</p>
+                        </div>
+
+                        <div ng-show="isSet('all')">
+                            <div ng-repeat="streamer in streamers">
+                                <h3 class="streamer offline" ng-if="!streamer.online">
+                                    {{streamer.name}}
+                                    <i class="fa fa-exclamation-circle" ng-if="!streamer.exists" title="Inexistent or deleted account"></i>
+                                </h3>
+                                <a href="{{streamer.data.channel.url}}" ng-if="streamer.online" target="_blank">
+                                    <h3 class="streamer">{{streamer.name}}</h3>
+                                </a>
                             </div>
                         </div>
 
-                        <div role="tabpanel" class="tab-pane fade" id="all">
-                            <div class="channel" ng-repeat="channel in streamers">
-                                <h1>{{channel}}</h1>
-                            </div>
-                        </div>
-                    </div>
-
+                    </section>
                 </div>
-                <!-- end tabs -->
 
             </div>
-            <!-- .col-xs-12 controller -->
         </div>
-        <!-- row -->
 
-    </div>
 
-    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../../bower_components/angular/angular.min.js"></script>
+        <footer class="footer">
+            <div class="container text-center">
+                <p>
+                    Written and Coded by
+                    <a href="http://jlouiss.github.io/" target="_blank">Jean Louis Salbego</a>
+                    2016
+                </p>
+            </div>
+        </footer>
 
-    <!-- <script src="js/twitch.js"></script> -->
-    <script src="js/scripts/app.js"></script>
-    <script src="js/scripts/controllers.js"></script>
-</body>
+
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+
+        <script src="js/twitch.js"></script>
+    </body>
 </html>
