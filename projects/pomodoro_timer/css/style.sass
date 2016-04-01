@@ -8,10 +8,12 @@
   -ms-user-select: none
   user-select: none
 
-body, html
-  background-color: #FF964D
-  height: 100%
+html
+  min-height: 100%
   width: 100%
+
+body
+  background-color: #FF964D
   color: #fff
   font-family: "Source Sans Pro", sans-serif
   font-weight: 200
@@ -39,7 +41,15 @@ a
   cursor: pointer
   box-shadow: 0 0 8px rgba(0, 0, 0, 1) inset
   &:hover
+    background-color: #ff964f
     box-shadow: 0 0 8px rgba(0, 0, 0, 1) inset, 0 0 15px rgba(0, 0, 0, 0.6) inset
+  &:active
+    transition: all 100ms ease-in-out
+    background-color: #ff853e
+    box-shadow: 0 0 8px rgba(0, 0, 0, 1) inset, 0 0 15px rgba(0, 0, 0, 0.6) inset, 0 0 32px rgba(0, 0, 0, 1) inset
+    #time
+      transition: all 100ms ease-out
+      font-size: 8.5rem
 
 #time
   padding-top: 159px
@@ -64,9 +74,11 @@ a
   padding: 5px 20px
   margin-top: 36px
   cursor: pointer
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3)
   &:hover
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5), 0 0 8px rgba(0, 0, 0, 0.3)
   &:active
+    transition: all 50ms ease-in-out
     background-color: #ee853c
 
 .footer
@@ -86,6 +98,9 @@ a
   #circle
     height: 208px
     width: 208px
+    &:active #time
+      transition: all 100ms ease-out
+      font-size: 3.5rem
   #time
     padding-top: 75px
     font-size: 38px

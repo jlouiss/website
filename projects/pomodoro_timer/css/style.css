@@ -9,10 +9,13 @@
   user-select: none;
 }
 
-body, html {
-  background-color: #FF964D;
-  height: 100%;
+html {
+  min-height: 100%;
   width: 100%;
+}
+
+body {
+  background-color: #FF964D;
   color: #fff;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 200;
@@ -45,7 +48,17 @@ a:hover, a:link, a:focus {
   box-shadow: 0 0 8px black inset;
 }
 #circle:hover {
+  background-color: #ff964f;
   box-shadow: 0 0 8px black inset, 0 0 15px rgba(0, 0, 0, 0.6) inset;
+}
+#circle:active {
+  transition: all 100ms ease-in-out;
+  background-color: #ff853e;
+  box-shadow: 0 0 8px black inset, 0 0 15px rgba(0, 0, 0, 0.6) inset, 0 0 32px black inset;
+}
+#circle:active #time {
+  transition: all 100ms ease-out;
+  font-size: 8.5rem;
 }
 
 #time {
@@ -75,11 +88,13 @@ a:hover, a:link, a:focus {
   padding: 5px 20px;
   margin-top: 36px;
   cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 #reset:hover {
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5), 0 0 8px rgba(0, 0, 0, 0.3);
 }
 #reset:active {
+  transition: all 50ms ease-in-out;
   background-color: #ee853c;
 }
 
@@ -105,6 +120,10 @@ a:hover, a:link, a:focus {
   #circle {
     height: 208px;
     width: 208px;
+  }
+  #circle:active #time {
+    transition: all 100ms ease-out;
+    font-size: 3.5rem;
   }
 
   #time {
