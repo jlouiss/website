@@ -12,10 +12,11 @@ $grey: #bcbcbc
 $blue: #3299bb
 $orange: #ff9900
 
+
 html
   position: relative
-  min-height: 720px
   min-width: 230px
+  min-height: 720px
   height: 100%
 *
   font-size: 0.8rem
@@ -23,27 +24,27 @@ html
 body
   /* Margin bottom by footer height
   margin-bottom: 3rem
-  font-family: 'Raleway', sans-serif
-  color: $black
   background-color: $white
+  color: $black
+  font-family: 'Raleway', sans-serif
   h1
     font-weight: 200
   > .container
     h1
-      font-family: 'Source Sans Pro', sans-serif
-      font-weight: 200
-      font-size: 3rem
       margin: 4rem auto
       text-shadow: 0.04rem 0.1rem 0.125rem $grey
+      font-weight: 200
+      font-size: 3rem
+      font-family: 'Source Sans Pro', sans-serif
     .row
       position: absolute
-      width: 100%
-      left: 0
       bottom: 4rem
+      left: 0
       margin: 0 auto
+      width: 100%
       .btn
-        width: 9rem
         margin-bottom: 0.6rem
+        width: 9rem
         border: 0.05rem solid $grey
         box-shadow: 0 0.1rem 0.125rem $black
         font-size: 0.8rem
@@ -52,15 +53,34 @@ body
     p
       margin-top: 7rem
 
+
 .disabled
   background-color: $grey
+.hidden
+  display: none
+.btn-twitch
+  background-color: #4A307A
+  color: #fff
+  &:link, &:visited
+    background-color: #4A307A
+    color: #fff
+  &:hover
+    background-color: #392f69
+    color: #fff
 
 .jumbotron
+  margin-bottom: 0
+  background-color: $orange
+  box-shadow: 0 0 0.8rem $black
   color: $white
   text-shadow: 0.04rem 0.1rem 0.125rem $black
-  box-shadow: 0 0 0.8rem $black
-  background-color: $orange
-  margin-bottom: 0
+
+
+// .dev-icons
+//   display: block
+//   svg
+//     margin: 2px 1rem
+
 
 .footer
   position: absolute
@@ -68,21 +88,22 @@ body
   width: 100%
   /* Set the fixed height of the footer here
   height: 3rem
-  color: $white
   background-color: $blue
-  text-shadow: 0.04rem 0.1rem 0.125rem $black
   box-shadow: 0 0 0.8rem $black
+  color: $white
+  text-shadow: 0.04rem 0.1rem 0.125rem $black
   a, a:hover, a:link, a:visited
     color: $white
   i
-    font-size: 1.2rem
     color: $white
 footer div
+  font-size: 1.2rem
   /* ehhh...
   background-color: $blue
   @media (max-width: 767px)
     div:first-of-type
       margin-top: 1rem
+
   @media (min-width: 768px)
     div
       margin-top: 1rem
