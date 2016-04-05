@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="author" content="Jean Louis Salbego">
+
+        <title>Tic Tac Toe</title>
+
+        <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <h1>Tic Tac Toe</h1>
+        </div>
+
+
+        <div class="initial-message text-center">
+            <span class="choice" id="x">
+                <i class="fa fa-times"></i>
+            </span>
+            or
+            <span class="choice" id="o">
+                <i class="fa fa-circle-o"></i>
+            </span>
+            ?
+            <br>
+            <small>X starts first</small>
+        </div>
+        <div class="container text-center">
+            <div class="col-xs-12 grid">
+                <div class="row">
+                    <div class="cell" id="c0"></div><div class="cell" id="c1"></div><div class="cell" id="c2"></div>
+                </div>
+                <div class="row">
+                    <div class="cell" id="c3"></div><div class="cell" id="c4"></div><div class="cell" id="c5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell" id="c6"></div><div class="cell" id="c7"></div><div class="cell" id="c8"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <p class="text-muted text-center">
+                Copyright ©
+                <a href="http://jlouiss.github.io/">Jean Louis Salbego</a>
+                2016
+            </p>
+        </footer>
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="js/tictactoe3.js"></script>
+    </body>
+</html>
