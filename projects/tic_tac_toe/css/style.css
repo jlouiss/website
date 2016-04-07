@@ -37,6 +37,10 @@ body {
   font-size: 2rem;
 }
 
+small {
+  font-size: 1rem;
+}
+
 .grid {
   margin: 2rem auto;
   padding: 0;
