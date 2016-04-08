@@ -12,17 +12,20 @@ var GameState = function(previousState) {
     // constructs state from previousState, if defined
     if (previousState != undefined) {
         var p = previousState;
-        this.board = p.board;
+
+        this.board = p.board.splice(0);
         this.activePlayer = p.opponent;
         this.opponent = p.activePlayer;
         this.depth = p.depth + 1;
     }
 
     // returns empty cells indexes
-    this.availableMoves = this.board.map(function(cell, index) {
-        if (cell == '')
-            return index;
-    });
+    var availableMoves = [];
+    for (var i in this.board) {
+        if (this.board[i] == '')
+            availableMoves.push(i);
+    }
+    this.availableMoves = availableMoves;
 
     // checks if this is a terminal state
     this.isTerminal = function() {
@@ -35,21 +38,27 @@ var GameState = function(previousState) {
 // generates possible states from a given state
 var Successors = function(state) {
     var moves = [],
-        availableMoves = state.availableMoves.slice();
-    console.log('AVAILABLE MOVES COPY');
-    console.log(availableMoves);
-    console.log('Successors, available moves: ' + JSON.stringify(state.availableMoves));
+        possibleStates = [],
+        availableMoves = state.availableMoves.splice(0);
+    console.log('available moves' + availableMoves);
 
-    this.possibleStates = availableMoves.map(function(cell) {
+    for (var i in availableMoves) {
+        var clonedState = jQuery.extend(true, {}, state),
+            cell = availableMoves[i],
+            nextState = {};
+        console.log(cell);
+
+        console.log('before nextState, state.board: ' + JSON.stringify(clonedState.board));
+        clonedState.board[cell] = clonedState.activePlayer;
+        var nextState = new GameState(clonedState);
+        console.log('after nextState, nextState.board: ' + JSON.stringify(nextState.board));
+
         moves.push(cell);
-
-        var newState = new GameState(state);
-        newState.board[cell] = newState.activePlayer;
-
-        return newState;
-    });
+        possibleStates.push(nextState);
+    }
 
     this.moves = moves; // keep track of the chosen cell for new state
+    this.possibleStates = possibleStates;
     console.log(this.moves);
 };
 

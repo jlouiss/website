@@ -1,3 +1,4 @@
+/*
 // minimax algorithm
 var minimax = function(state) {
     console.log('begin minimax, board: ' + JSON.stringify(state.board));
@@ -46,4 +47,16 @@ var minValue = function(state) {
     }
 
     return minimaxValue;
+};
+*/
+
+
+var minimax = function(state) {
+    if (state.isTerminal()) {
+        return utility(state);
+    } else if (state.activePlayer == MAX) {
+        // return maximum for all possible actions of minimax(results(s, a));
+    } else {
+        // return minimum for all possible actions of minimax(results(s, a));
+    }
 };
