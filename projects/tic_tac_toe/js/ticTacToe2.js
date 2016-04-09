@@ -1,33 +1,30 @@
 $(document).ready(function() {
+    /* cpuChoice, MAX and MIN are declared as global on the other modules */
     $('.grid').hide();
 
     // font awesome icons
     var xIcon = '<i class="fa fa-times"></i>',
         oIcon = '<i class="fa fa-circle-o"></i>';
 
-    // initializes game state
-    var game = new GameState(),
+    // initializes players & cpu choice
+    var gameState = initialState.splice(0),
         human,
         computer;
 
-
     // updates the grid & game state
     var updateGame = function(cell) {
-        console.log('begin updateGame, board: ' + JSON.stringify(game.board));
+        console.log('begin updateGame, board: ' + JSON.stringify(gameState));
         var cellId = '#c' + cell;
         console.log(cellId);
 
         if ($(cellId).html() == '') {
-            var icon = (game.activePlayer == MAX) ? xIcon : oIcon;
+            var icon = (activePlayer(gameState) == MAX) ? xIcon : oIcon;
             $(cellId).html(icon);
         }
 
         // update game state
-        game.board[cell] = game.activePlayer;
-
-        var clonedState = jQuery.extend(true, {}, state);
-        game = new GameState(clonedState);
-        console.log('end updateGame, board: ' + JSON.stringify(game.board));
+        gameState = nextState(gameState, cell);
+        console.log('end updateGame, board: ' + JSON.stringify(gameState));
     };
 
     // sets human and computer player
@@ -38,12 +35,11 @@ $(document).ready(function() {
         $('.initial-message').hide(400);
         $('.grid').show(800);
 
-        if (game.activePlayer == computer) {
+        if (activePlayer(gameState) == computer) {
             // after a delay, cpu makes its choice
             setTimeout(function() {
-                console.log('game board: ' + game.board);
-                var clonedState = jQuery.extend(true, {}, game),
-                    cpuChoice = minimax(clonedState);
+                console.log('game board: ' + gameState);
+                minimax(gameState.splice(0));
                 console.log('cpu choice: ' + cpuChoice);
                 updateGame(cpuChoice);
             }, 850);
@@ -51,7 +47,7 @@ $(document).ready(function() {
     });
 
     $('.cell').click(function() {
-        if (game.activePlayer == human && $(this).html() == '') {
+        if (activePlayer(gameState) == human && $(this).html() == '') {
             // extracts the cell index
             cell = ($(this).attr('id')).substr(-1, 1);
             console.log(cell);
@@ -60,8 +56,7 @@ $(document).ready(function() {
 
             // after a delay, cpu makes its choice
             setTimeout(function() {
-                var clonedState = jQuery.extend(true, {}, game),
-                    cpuChoice = minimax(clonedState);
+                minimax(gameState.splice(0));
                 console.log(cpuChoice);
                 updateGame(cpuChoice);
             }, 750);
