@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,200|Source+Sans+Pro:200)
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400|Raleway:200)
 \:root
   font-size: 18px
   @media (max-width: 767px)
@@ -17,26 +17,32 @@ html
   position: relative
   min-width: 230px
   min-height: 720px
-  height: 100%
 *
   font-size: 0.8rem
 
 body
-  /* Margin bottom by footer height
+  // Margin bottom by footer height
   margin-bottom: 3rem
   background-color: $white
   color: $black
-  font-family: 'Raleway', sans-serif
-  h1
+  font-family: 'Source Sans Pro', sans-serif
+  font-weight: 400
+  .jumbotron h1
+    font-family: 'Raleway', sans-serif
     font-weight: 200
-  > .container
-    h1
-      margin: 4rem auto
-      text-shadow: 0.04rem 0.1rem 0.125rem $grey
-      font-weight: 200
-      font-size: 3rem
-      font-family: 'Source Sans Pro', sans-serif
-    .row
+  .container
+    #upper-row
+      margin-bottom: 20rem
+      h1
+        margin: 4rem auto 1rem auto
+        text-shadow: 0.04rem 0.1rem 0.125rem $grey
+        font-weight: 200
+        font-size: 3rem
+        font-family: 'Source Sans Pro', sans-serif
+      p, i
+        font-size: 1rem
+        font-weight: 300
+    #lower-row
       position: absolute
       bottom: 4rem
       left: 0
@@ -47,11 +53,11 @@ body
         width: 9rem
         border: 0.05rem solid $grey
         box-shadow: 0 0.1rem 0.125rem $black
-        font-size: 0.8rem
+        font-size: 0.7rem
         @media only screen and (max-width: 480px)
-          font-size: 0.8rem
-    p
-      margin-top: 7rem
+          font-size: 0.6rem
+      p
+        margin-top: 7rem
 
 
 .disabled
@@ -86,7 +92,7 @@ body
   position: absolute
   bottom: 0
   width: 100%
-  /* Set the fixed height of the footer here
+  // Set the fixed height of the footer here
   height: 3rem
   background-color: $blue
   box-shadow: 0 0 0.8rem $black
@@ -98,7 +104,7 @@ body
     color: $white
 footer div
   font-size: 1.2rem
-  /* ehhh...
+  // ehhh...
   background-color: $blue
   @media (max-width: 767px)
     div:first-of-type

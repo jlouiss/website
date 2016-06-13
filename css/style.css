@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,200|Source+Sans+Pro:200);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400|Raleway:200);
 :root {
   font-size: 18px;
 }
@@ -17,7 +17,6 @@ html {
   position: relative;
   min-width: 230px;
   min-height: 720px;
-  height: 100%;
 }
 
 * {
@@ -25,42 +24,50 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
   margin-bottom: 3rem;
   background-color: #e9e9e9;
   color: #424242;
-  font-family: "Raleway", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
 }
-body h1 {
+body .jumbotron h1 {
+  font-family: "Raleway", sans-serif;
   font-weight: 200;
 }
-body > .container h1 {
-  margin: 4rem auto;
+body .container #upper-row {
+  margin-bottom: 20rem;
+}
+body .container #upper-row h1 {
+  margin: 4rem auto 1rem auto;
   text-shadow: 0.04rem 0.1rem 0.125rem #bcbcbc;
   font-weight: 200;
   font-size: 3rem;
   font-family: "Source Sans Pro", sans-serif;
 }
-body > .container .row {
+body .container #upper-row p, body .container #upper-row i {
+  font-size: 1rem;
+  font-weight: 300;
+}
+body .container #lower-row {
   position: absolute;
   bottom: 4rem;
   left: 0;
   margin: 0 auto;
   width: 100%;
 }
-body > .container .row .btn {
+body .container #lower-row .btn {
   margin-bottom: 0.6rem;
   width: 9rem;
   border: 0.05rem solid #bcbcbc;
   box-shadow: 0 0.1rem 0.125rem #424242;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 @media only screen and (max-width: 480px) {
-  body > .container .row .btn {
-    font-size: 0.8rem;
+  body .container #lower-row .btn {
+    font-size: 0.6rem;
   }
 }
-body > .container p {
+body .container #lower-row p {
   margin-top: 7rem;
 }
 
@@ -97,7 +104,6 @@ body > .container p {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 3rem;
   background-color: #3299bb;
   box-shadow: 0 0 0.8rem #424242;
@@ -113,7 +119,6 @@ body > .container p {
 
 footer div {
   font-size: 1.2rem;
-  /* ehhh... */
   background-color: #3299bb;
 }
 @media (max-width: 767px) {
