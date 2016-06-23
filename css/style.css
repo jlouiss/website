@@ -44,7 +44,7 @@ body .container #upper-row h1 {
   font-size: 3rem;
   font-family: "Source Sans Pro", sans-serif;
 }
-body .container #upper-row p, body .container #upper-row i {
+body .container #upper-row p, body .container #upper-row i, body .container #upper-row a {
   font-size: 1rem;
   font-weight: 300;
 }
