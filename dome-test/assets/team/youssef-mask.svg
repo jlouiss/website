@@ -1,0 +1,10 @@
+<div class="svg-container" id="youssef-container">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 588.00001 573.00001" preserveAspectRatio="xMinYMin meet" width="588" height="573">
+    <defs>
+      <pattern id="youssef" x="0" y="0" width="1" height="1">
+        <image xlink:href="./assets/team/youssef.png" width="588" height="573" />
+      </pattern>
+    </defs>
+    <path fill="url(#youssef)" stroke="white" stroke-width="2px" d="m 0,573 34.125594,-155.76683 34.676007,-56.1421 95.771829,-48.43633 36.32725,-42.9322 -7.70578,-23.11734 -29.7223,-34.676 -30.82311,-67.15037 11.00825,-79.809853 72.65449,-58.3437581 77.60821,-6.6049537 53.39004,36.8776578 30.27271,53.940456 4.95371,64.398301 -29.72229,59.44458 6.05454,38.5289 58.34376,55.04128 93.01976,37.42807 18.71404,16.51238 36.32725,94.12059 L 588,573 Z" class="svg-content" />
+  </svg>
+</div>

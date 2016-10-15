@@ -1,0 +1,10 @@
+<div class="svg-container" id="jean-container">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 633.00001 568.00001" preserveAspectRatio="xMinYMin meet" width="633" height="568">
+    <defs>
+      <pattern id="jean" x="0" y="0" width="1" height="1">
+        <image xlink:href="localhost:3000/assets/team/jean.png" width="633" height="568" />
+      </pattern>
+    </defs>
+    <path fill="url(#jean)" stroke="white" stroke-width="2px" d="M 0,568.00001 2.8744851,557.8786 48.866248,421.40126 113.82961,354.1383 l 101.18188,-47.71645 25.87037,-36.79341 -3.44939,-28.16995 -14.37242,-13.22263 1.72469,-58.6395 -6.59877,-54.04032 17.24692,-55.190117 37.3683,-40.817689 53.46543,-20.12139628 43.11727,4.59917628 42.54238,18.396705 33.91893,54.040321 2.87448,37.36831 6.89877,12.07283 4.59917,55.19012 -3.44938,41.96748 -33.34403,56.33991 43.11728,47.71645 56.33991,31.61934 63.23867,60.93909 30.46955,78.76089 L 633,568.00001 Z" class="svg-content"/>
+  </svg>
+</div>

@@ -1,0 +1,10 @@
+<div class="svg-container" id="luca-container">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 557.00001 592.00001" preserveAspectRatio="xMinYMin meet" width="557" height="592">
+    <defs>
+      <pattern id="luca" x="0" y="0" width="1" height="1">
+        <image xlink:href="./assets/team/luca.png" width="557" height="592" />
+      </pattern>
+    </defs>
+    <path fill="url(#luca)" stroke="white" stroke-width="2px" d="m 0,592 8.1060796,-104.70353 37.1528644,-81.7363 51.338504,-25.66925 58.769072,-44.58344 29.7223,-10.1326 21.61621,-41.88141 -22.29172,-80.38529 0,-48.63648 6.75507,-77.007752 47.96097,-49.987491 60.12009,-28.371278 50.66299,36.477358 35.12635,58.09357 8.78159,60.795593 -16.88767,76.33225 -14.86115,8.78159 -3.37753,22.29172 21.61621,46.60996 98.62397,52.68951 60.7956,54.71604 16.88766,58.09357 -7.43057,54.04053 L 557,592 Z" class="svg-content" />
+  </svg>
+</div>

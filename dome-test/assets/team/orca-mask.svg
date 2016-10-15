@@ -1,0 +1,10 @@
+<div class="svg-container" id="orca-container">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 616.00001 583.00001" preserveAspectRatio="xMinYMin meet" width="616" height="583">
+    <defs>
+      <pattern id="orca" x="0" y="0" width="1" height="1">
+        <image xlink:href="./assets/team/orca.png" width="616" height="583" />
+      </pattern>
+    </defs>
+    <path fill="url(#orca)" stroke="white" stroke-width="2px" d="m 0,583.00003 8.2061546,-57.0328 27.9009254,-54.16063 147.30048,-72.21416 22.15661,-21.74631 -2.46184,-45.95446 -47.5957,-100.11509 -38.15862,-122.2717 37.338,-75.086316 77.95847,-29.5421567 76.13786,-5.2824618 36.51738,36.9276955 26.2597,16.002002 5.74431,7.795847 24.20815,118.16863 -6.56492,48.41631 -8.20615,16.002 -12.30924,5.74431 -1.23092,28.72154 11.07831,42.2617 30.77308,64.82862 162.07155,80.01 36.10708,50.05755 L 616,583.00003 Z" class="svg-content" />
+  </svg>
+</div>

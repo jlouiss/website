@@ -1,0 +1,10 @@
+<div class="svg-container" id="elisa-container">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 556.00001 552.00001" preserveAspectRatio="xMinYMin meet" width="556" height="552">
+    <defs>
+      <pattern id="elisa" x="0" y="0" width="1" height="1">
+        <image xlink:href="./assets/team/elisa.png" width="556" height="552" />
+      </pattern>
+    </defs>
+    <path fill="url(#elisa)" stroke="white" stroke-width="2px" d="M 0,552.00001 43.917938,395.3375 96.357268,333.0658 169.77233,297.66925 168.15036,242.60796 187.15962,97.744308 226.14461,26.951213 308.73655,0.07605704 374.94121,26.951213 l 44.22892,83.902927 17.04278,110.12259 22.28671,84.55842 32.11909,15.07631 5.24394,11.79885 22.9422,20.32024 27.53065,112.74456 8.6645,86.52488 z" class="svg-content" />
+  </svg>
+</div>
