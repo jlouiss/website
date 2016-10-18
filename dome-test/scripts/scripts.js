@@ -20,8 +20,13 @@ $(document).ready(function() {
     muri: 'http://www.domedesign.it/nicola-murianni.html',
     elisa: 'http://www.domedesign.it/elisa-benetti.html'
   };
-
   $('path').on('click', function() {
     window.location = team[this.id.split('-')[0]];
+  });
+
+  $(function() {
+    $('.toggleNav').on('click',function() {
+      $('nav ul').toggleClass('open');
+    });
   });
 });
