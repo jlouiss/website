@@ -23,22 +23,62 @@ $(document).ready(function() {
     }
   });
 
+  // workaround for <path> links
   var team = {
-    luca: 'http://www.domedesign.it/luca-rossi.html',
-    jean: 'http://www.domedesign.it/jean-louis-salbego.html',
-    orca: 'http://www.domedesign.it/laerte-schiavo.html',
-    youssef: 'http://www.domedesign.it/youssef-dalima.html',
-    muri: 'http://www.domedesign.it/nicola-murianni.html',
-    elisa: 'http://www.domedesign.it/elisa-benetti.html'
+    luca: 'luca-rossi.html',
+    jean: 'jean-louis-salbego.html',
+    orca: 'laerte-schiavo.html',
+    youssef: 'youssef-dalima.html',
+    muri: 'nicola-murianni.html',
+    elisa: 'elisa-benetti.html'
   };
   $('path').on('click', function() {
     window.location = team[this.id.split('-')[0]];
   });
 
+  // mobile navbar
   $(function() {
     $('.toggleNav').on('click', function() {
       $('nav ul').toggleClass('open');
       $('#hero').toggleClass('fix');
     });
+  });
+
+  // dynamic positioning for svg in members' pages
+  $(window).scroll(function() {
+    var userScroll = $(window).scrollTop() + $(window).height();
+    var footerTop = $('footer').position().top;
+    var navBottom = $('nav').height();
+    var svgTop = $('#member-svg').height();
+
+    $('#sidebar').html(`
+      svgTop: ${svgTop}<br>
+      navBottom: ${navBottom}
+    `);
+
+    if (svgTop >= userScroll - navBottom) {
+      $('#member-svg').css({
+        top: navBottom + 10,
+        bottom: 'auto'
+      });
+    } else {
+      $('#member-svg').css({
+        top: 'auto',
+        bottom: 0
+      });
+    }
+
+    if (userScroll >= footerTop) {
+      $('#member-svg').css({
+        top: 'auto',
+        bottom: userScroll - footerTop
+      });
+    } else {
+      $('#member-svg').css({
+        top: 'auto',
+        bottom: 0
+      });
+    }
+
   });
 });
