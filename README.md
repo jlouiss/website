@@ -27,9 +27,9 @@ Soon I'll move to Brazil to live with my soon-to-be wife.
   - Basic REST API server
 
 #### Other skills and things I like
-  - PHP & MySQL (Learning)
+  - PHP & MySQL (Basic knowledge)
   - Photoshop & Illustrator (Basic tasks, same with GIMP & InkScape)
-  - Persistency & pacience (tons)
+  - Persistency and patience
   - Guitar
   - Brazillian Portuguese (fluent)
   - Italian (Native)
