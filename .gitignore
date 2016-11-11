@@ -1,1 +1,3 @@
-dome-test/assets/videos
+node_modules/
+yarn.lock
+bower_components/
