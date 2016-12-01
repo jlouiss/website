@@ -24,6 +24,9 @@ $(document).ready(function() {
 
   // Smooth scroll
   $('a[href*="#"]:not([href="#"])').click(function() {
+
+    $('html').css({ 'overflow-y': 'auto' });
+
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -42,10 +45,10 @@ $(document).ready(function() {
   $('#title').css({ opacity: 0 });
 
   $('.overlay').on('click', function() {
+    $(document).scrollTop(0);
     $('.hero.overlay').animate({ opacity: 0 }, 800);
 
     setTimeout(function() {
-      $('html').css({ overflow: 'auto' });
       $('.hero.overlay').remove();
       $('#title').animate({ opacity: 1 }, 400);
     }, 2000);
