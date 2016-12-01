@@ -1,10 +1,10 @@
 // // YouTube API
-// let tag = document.createElement('script');
+// var tag = document.createElement('script');
 // tag.src = "http://www.youtube.com/player_api";
-// let firstScriptTag = document.getElementsByTagName('script')[0];
+// var firstScriptTag = document.getElementsByTagName('script')[0];
 // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-let player;
+var player;
 
 /* from https://css-tricks.com/play-button-youtube-and-vimeo-api/ */
 // When the API is loaded this function gets called
@@ -17,7 +17,6 @@ function onYouTubePlayerAPIReady() {
 }
 
 function onPlayerReady(event) {
-  player.playVideo();
   player.pauseVideo();
 }
 
@@ -37,10 +36,31 @@ $(document).ready(function() {
     }
   });
 
+
+  // hide overlay on click, play video background
+  $('.hero-head, .hero-foot').css({ opacity: 0 });
+  $('#title').css({ opacity: 0 });
+
   $('.overlay').on('click', function() {
-    $(this).animate({opacity: 0}, 400);
+    $('.hero.overlay').animate({ opacity: 0 }, 800);
+
+    setTimeout(function() {
+      $('html').css({ overflow: 'auto' });
+      $('.hero.overlay').remove();
+      $('#title').animate({ opacity: 1 }, 400);
+    }, 2000);
+    setTimeout(function() {
+      $('.hero-head, .hero-foot').animate({ opacity: 1 }, 1200);
+    }, 3000);
+
     player.playVideo();
-    $(this).css({ display: 'none' });
+  });
+
+
+  // mobile menu
+  $('.nav-toggle').on('click', function() {
+    $(this).toggleClass('is-active');
+    $('.nav-menu').toggleClass('is-active');
   });
 
 });
