@@ -21,12 +21,8 @@ function onPlayerReady(event) {
 }
 
 $(document).ready(function() {
-
   // Smooth scroll
   $('a[href*="#"]:not([href="#"])').click(function() {
-
-    $('html').css({ 'overflow-y': 'auto' });
-
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -45,7 +41,8 @@ $(document).ready(function() {
   $('#title').css({ opacity: 0 });
 
   $('.overlay').on('click', function() {
-    $(document).scrollTop(0);
+    $('html').css({ 'overflow-y': 'auto' });
+    $('html, body').animate({ scrollTop: 0 }, 1);
     $('.hero.overlay').animate({ opacity: 0 }, 800);
 
     setTimeout(function() {
@@ -66,4 +63,23 @@ $(document).ready(function() {
     $('.nav-menu').toggleClass('is-active');
   });
 
+
+  var currentSection = 0;
+
+  // horizontal scroll
+  $('.right-arrow *').on('click', function() {
+    currentSection--;
+    if (currentSection <= -6) return false;
+    var marginLeft = currentSection * 100;
+    $('.content-section').animate({ 'margin-left': marginLeft + 'vw' }, 100);
+    return false;
+  });
+
+  $('.left-arrow *').on('click', function() {
+    currentSection++;
+    if (currentSection >= 0) return false;
+    var marginLeft = currentSection * 100;
+    $('.content-section').animate({ 'margin-left': marginLeft + 'vw' }, 100);
+    return false;
+  });
 });
