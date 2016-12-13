@@ -1,40 +1,41 @@
-# [jlouiss.github.io](http://jlouiss.github.io/)
-
-
-### This is me
+## [My portfolio](http://jlouiss.github.io/)
 I am Jean, a Front End Developer from Italy; I currently work at [Dome Design](http://domedesign.it).
 Soon I'll move to Brazil to live with my soon-to-be wife.
 
+---
 
-### This is what I know:
-
-#### HTML5
+### Skills
+**HTML5**
   - Vanilla
-  - Frameworks (Bootstrap and so on)
+  - Frameworks (Bootstrap and Bulma)
   - Pug (Jade)
 
-#### CSS3
+**CSS3**
   - Vanilla
-  - Frameworks (Bootstrap and so on)
+  - Frameworks (Bootstrap and Bulma)
   - SASS (SCSS) & LESS
 
-#### JavaScript (I love JavaScript)
-  - Vanilla (and ES6)
+**JavaScript (I love JavaScript)**
+  - ES5, ES6
   - Frameworks (AngularJS 1.5 and ionic, some react)
 
-#### Node.js
+**Python 2.7**
+  - Vanilla
+
+**Node.js**
   - Gulp
   - Basic REST API server
 
-#### Other skills and things I like
+
+**Other skills and things I like**
+  - Persistency and patience
   - PHP & MySQL (Basic knowledge)
   - Photoshop & Illustrator (Basic tasks, same with GIMP & InkScape)
-  - Persistency and patience
   - Guitar
   - Brazillian Portuguese (fluent)
   - Italian (Native)
 
-## Contact
+## Contacts
 You can contact me at **[jlsalbego@domedesign.it](mailto:jlsalbego@domedesign.it)**
  - [Codepen](http://codepen.io/JLouisS/)
  - [Twitter](https://twitter.com/jlslbg)
