@@ -19,13 +19,16 @@ Soon I'll move to Brazil to live with my soon-to-be wife.
   - ES5, ES6
   - Frameworks (AngularJS 1.5 and ionic, some react)
 
-**Python 2.7**
-  - Vanilla
+**Drupal 8**
+  - CMS usage
+  - Drupal themes with twig and yml
 
 **Node.js**
-  - Gulp
+  - Gulp, webpack 2
   - Basic REST API server
 
+**Python 2.7**
+  - Vanilla
 
 **Other skills and things I like**
   - Persistency and patience
