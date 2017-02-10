@@ -7,3 +7,6 @@
 [submodule "projects/wikipedia_viewer"]
 	path = projects/wikipedia_viewer
 	url = https://github.com/jlouiss/wikipedia-viewer.git
+[submodule "projects/twitch"]
+	path = projects/twitch
+	url = https://github.com/jlouiss/twitch-viewer.git

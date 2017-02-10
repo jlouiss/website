@@ -1,6 +1,5 @@
 ## [My portfolio](http://jlouiss.github.io/)
 I am Jean, a Front End Developer from Italy; I currently work at [Dome Design](http://domedesign.it).
-Soon I'll move to Brazil to live with my soon-to-be wife.
 
 ---
 
