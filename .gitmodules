@@ -1,3 +1,6 @@
 [submodule "projects/weather"]
 	path = projects/weather
 	url = https://github.com/jlouiss/weather-app.git
+[submodule "projects/tribute_page"]
+	path = projects/tribute_page
+	url = https://github.com/jlouiss/tribute-page.git
