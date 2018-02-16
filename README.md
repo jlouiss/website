@@ -16,7 +16,9 @@ I am Jean, a Full Stack Developer from Italy; I currently work at [Studio Storti
 
 **JavaScript (I love JavaScript)**
   - ES5, ES6, ES6+
+  - TypeScript
   - Frameworks (AngularJS 1.5 and 5)
+  - MVC and SAM Design Patterns
 
 **Node.js**
   - Gulp, Webpack
