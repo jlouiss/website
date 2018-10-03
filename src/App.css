@@ -11,6 +11,7 @@
 
 :root * {
     background: none;
+    transition: all .15s ease-out;
 }
 
 .App {
@@ -24,40 +25,72 @@
     justify-content: center;
 }
 
-.App-header {
+.header {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 3rem;
 }
 
-.App-header > * {
+.header > * {
     flex: 1 1 100%;
 }
 
-.App-header .title {
+.header .title {
     font-size: 3rem;
     margin-bottom: 2rem;
 }
 
-.App-header .subtitle {
+.header .subtitle {
     font-size: 1.8rem;
     margin-top: 0;
 }
 
-.App-header p {
-    align-self: flex-end;
+.icons > a {
+    padding: 0 1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.icons > a:hover > i.fab {
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+
+.icons > a:hover > i.fab.fa-github {
     color: #000;
 }
 
+.icons > a:hover > i.fab.fa-linkedin {
+    color: #0077b5;
+}
+
+.icons > a:hover > i.fab.fa-twitter {
+    color: #1DA1F2;
+}
+
+.icons > a:hover > i.fab.fa-free-code-camp {
+    color: #006400;
+}
+
+.icons > a:hover > i.fab.fa-instagram {
+    color: #262626;
+}
+
+small.footer {
+    color: #000;
+}
+
+
 @media (min-width: 700px) {
-    .App-header .title {
+    .header .title {
         font-size: 4rem;
         margin-bottom: 2.2rem;
     }
 
-    .App-header .subtitle {
+    .header .subtitle {
         font-size: 2.2rem;
         margin-top: 0;
     }
