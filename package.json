@@ -2,7 +2,7 @@
   "name": "jlouiss.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jlouiss.github.io",
+  "homepage": "https://jlouiss.github.io/",
   "dependencies": {
     "grommet": "^1.11.0",
     "react": "^16.5.2",
