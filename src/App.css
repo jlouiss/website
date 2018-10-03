@@ -19,6 +19,16 @@
     justify-content: center;
 }
 
+.App-header .title {
+    font-size: 4rem;
+    margin-bottom: 2.2rem;
+}
+
+.App-header .subtitle {
+    font-size: 2.2rem;
+    margin-top: 0;
+}
+
 .App-header p {
     padding-top: 3rem;
     color: #000;
