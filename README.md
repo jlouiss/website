@@ -1,6 +1,8 @@
 ## [My portfolio](http://jlouiss.github.io/)
 I am Jean, a Full Stack Developer from Italy; I currently work at [Studio Storti](https://studiostorti.com).
+
 I work with Angular for most of the time. When I have free time I like learning things and reading books.
+
 I recently enrolled at the University of Milan to pursue a degree in cybersecurity.
 
 I am passionate about JavaScript, mechanical keyboards, Linux and learning.
