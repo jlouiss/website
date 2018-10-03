@@ -1,32 +1,32 @@
 {
-  "name": "new-portfolio",
-  "version": "1.0.0",
-  "description": "new portfolio",
-  "main": "index.js",
-  "author": "jlouiss <jlsalbego@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "browser-sync": "^2.17.5",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-cache": "^0.4.5",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-if": "^2.0.1",
-    "gulp-imagemin": "^3.0.3",
-    "gulp-pug": "^3.1.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^2.0.0",
-    "gulp-useref": "^3.1.2",
-    "gulp-util": "^3.0.7",
-    "jquery": "^3.1.1",
-    "materialize-css": "^0.97.7",
-    "run-sequence": "^1.2.2"
-  },
+  "name": "jlouiss.github.io",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://jlouiss.github.io",
   "dependencies": {
-    "gulp-concat": "^2.6.0",
-    "node-sass": "^3.11.2",
-    "normalize-css": "^2.3.1"
+    "grommet": "^1.11.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "2.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.0"
   }
 }
