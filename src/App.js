@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import './App.css';
 import Main from './js/components/Main';
@@ -10,7 +10,9 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Route exact path="/" component={Main}/>
+                <BrowserRouter basename={process.env.PUBLIC_URL}>
+                    <Route exact path="/" component={Main}/>
+                </BrowserRouter>
             </div>
         );
     }
