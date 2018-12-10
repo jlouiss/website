@@ -1,5 +1,5 @@
 ## [My portfolio](http://jlouiss.github.io/)
-I am Jean, a Full Stack Developer from Italy; I currently work at [Studio Storti](https://studiostorti.com).
+I am Jean, a Full Stack Developer from Italy; I currently work at [Cytec Solutions](https://cytecsolutions.com).
 
 I work with Angular for most of the time. When I have free time I like learning things and reading books.
 
