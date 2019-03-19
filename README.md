@@ -1,9 +1,7 @@
 ## [My portfolio](http://jlouiss.github.io/)
-I am Jean, a Full Stack Developer from Italy; I currently work at [Cytec Solutions](https://cytecsolutions.com).
+I am Jean, a Full Stack Developer from Italy; I currently work at [Phantom](https://phantom.land).
 
 I work with Angular for most of the time. When I have free time I like learning things and reading books.
-
-I recently enrolled at the University of Milan to pursue a degree in cybersecurity.
 
 I am passionate about JavaScript, mechanical keyboards, Linux and learning.
 
@@ -14,7 +12,7 @@ I am passionate about JavaScript, mechanical keyboards, Linux and learning.
   - HTML5 & CSS3 (Bootstrap 3 & 4)
   - JavaScript (ES5/6/6+)
   - TypeScript
-  - Angular 1 & 2+
+  - Angular
   - NodeJS
   - Agile development (JIRA)
   - Git
