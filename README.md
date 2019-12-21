@@ -1,4 +1,4 @@
-## [My portfolio](http://jlouiss.github.io/)
+## [My portfolio](http://jlouis.me/)
 I am Jean, a Full Stack Developer from Italy; I currently work at [Phantom](https://phantom.land).
 
 I work with Angular for most of the time. When I have free time I like learning things and reading books.
