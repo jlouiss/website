@@ -14,9 +14,9 @@ I am passionate about JavaScript, mechanical keyboards, Linux and learning.
   - TypeScript
   - Angular
   - Agile development (JIRA)
-  - Git
+  - Git (git flow)
   - WebStorm/PHPStorm
-  - Linux shell (bash, zsh)
+  - Linux (system administration)
   - I know something about
     - NodeJS
     - React
