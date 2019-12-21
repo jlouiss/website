@@ -13,12 +13,12 @@ I am passionate about JavaScript, mechanical keyboards, Linux and learning.
   - JavaScript (ES5/6/6+)
   - TypeScript
   - Angular
-  - NodeJS
   - Agile development (JIRA)
   - Git
-  - PhpStorm
+  - WebStorm/PHPStorm
   - Linux shell (bash, zsh)
   - I know something about
+    - NodeJS
     - React
     - PHP, Laravel and MySQL
     - Python
@@ -27,14 +27,14 @@ I am passionate about JavaScript, mechanical keyboards, Linux and learning.
 ### Tools I like
   - Git
   - JIRA
-  - PhpStorm
+  - WebStorm
   - Vim
   - tmux
   - zsh
 
 
 ### Other skills and things I like
-  - Linux (arch/antergos)
+  - Linux (arch)
   - Open Source Software
   - Persistency, Patience, Discipline
   - Reading books
@@ -43,7 +43,7 @@ I am passionate about JavaScript, mechanical keyboards, Linux and learning.
   - Italian (Native)
 
 ### Links
-You can contact me at **[jlsalbego@gmail.com](mailto:jlsalbego@gmail.com)**
+You can contact me at **[info@jlouis.me](mailto:info@jlouis.me)**
   - [Codepen](http://codepen.io/JLouisS/)
   - [Twitter](https://twitter.com/jlsalbego)
   - [LinkedIn](https://www.linkedin.com/in/jeanlouissalbego)
