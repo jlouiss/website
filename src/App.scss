@@ -1,4 +1,5 @@
 .container {
+  color: #1a1a1a;
   font-family: "Inter", sans-serif;
   height: 100%;
 }
@@ -43,11 +44,17 @@
   animation: ntmu .8s ease-in-out;
   animation-delay: 4s;
   animation-fill-mode: forwards;
+  color: #1a1a1a;
   font-size: 2rem;
   font-weight: 200;
   opacity: 0;
   position: relative;
   top: .2em;
+}
+
+a {
+  color: #1a1a1a;
+  text-decoration: none;
 }
 
 @keyframes hi {
@@ -89,7 +96,7 @@
     opacity: 0;
     top: .2em;
   }
-  33% {
+  40% {
     font-weight: 100;
   }
   50% {
