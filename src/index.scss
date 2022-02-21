@@ -1,3 +1,16 @@
 @import '~bootstrap/dist/css/bootstrap-reboot.min.css';
 @import '~bootstrap/dist/css/bootstrap-grid.min.css';
 @import '~bootstrap/dist/css/bootstrap-utilities.min.css';
+
+:root {
+  font-size: 18px;
+}
+
+html, body {
+  background: linear-gradient(to top right, #ffeee0, #dfe9ff);
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}

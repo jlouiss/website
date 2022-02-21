@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+.container {
+  font-family: "Inter", sans-serif;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  animation: fadeIn 3s ease-in-out;
+  animation-delay: .8s;
+  animation-fill-mode: forwards;
+  font-size: 6.4rem;
+  font-weight: 100;
+  opacity: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.name {
+  animation: fadeInBolden 3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.subtitle {
+  animation: fadeIn .4s ease-in-out;
+  animation-delay: 3.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    font-weight: 100;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes fadeInBolden {
+  0% {
+    font-weight: 100;
   }
-  to {
-    transform: rotate(360deg);
+  40% {
+    font-weight: 100;
+    opacity: 1;
+  }
+  70% {
+    font-weight: 100;
+  }
+  100% {
+    font-weight: 700;
+    opacity: 1;
   }
 }
